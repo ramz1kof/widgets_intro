@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 class PrintButton extends StatelessWidget {
+  final Function onDoubleTap;
+  final Function onTap;
+
+  PrintButton({this.onDoubleTap, this.onTap});
+
   Widget build(BuildContext context) {
     return GestureDetector(
-      onDoubleTap: () => print('Button was tapped twice'),
-      onTap: () => print('Button was tapped'),
+      onDoubleTap: onDoubleTap,
+      onTap: onTap,
       child: Container(
         height: 50.0,
         width: 200.0,
