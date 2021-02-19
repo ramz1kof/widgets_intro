@@ -51,17 +51,58 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Center(
-                  child: Text(
-                    'Hello world',
-                    style: TextStyle(
-                      color: Colors.purple[900],
-                      fontSize: 40.0,
-                      decoration: TextDecoration.underline,
-                      decorationThickness: 3.0,
-                      decorationColor: Colors.green[800],
-                      decorationStyle: TextDecorationStyle.double,
-                    ),
+                child: Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 20.0,
+                  ),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 200.0,
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 150.0,
+                        width: 400.0,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(8.0),
+                            topRight: Radius.circular(8.0),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Слава',
+                            style: TextStyle(
+                              color: Colors.yellow,
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 150.0,
+                        width: 400.0,
+                        decoration: BoxDecoration(
+                          color: Colors.yellow,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(8.0),
+                            bottomRight: Radius.circular(8.0),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Україні',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
