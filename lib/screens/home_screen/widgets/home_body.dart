@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_intro/screens/home_screen/widgets/print_button.dart';
+import 'package:widgets_intro/screens/home_screen/widgets/points_button.dart';
 
 class HomeBody extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _HomeBodyState extends State<HomeBody> {
           Container(
             height: 30.0,
           ),
-          PrintButton(
+          PointsButton(
             onDoubleTap: _doubleTapPointsIncrement,
             onTap: _oneTapPointsIncrement,
           ),

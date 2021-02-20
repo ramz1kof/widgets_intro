@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class PrintButton extends StatelessWidget {
+class PointsButton extends StatelessWidget {
   final Function onDoubleTap;
   final Function onTap;
 
-  PrintButton({this.onDoubleTap, this.onTap});
+  PointsButton({this.onDoubleTap, this.onTap});
 
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,17 +19,16 @@ class PrintButton extends StatelessWidget {
           horizontal: 8.0,
         ),
         decoration: BoxDecoration(
-          color: Colors.purple,
+          color: Colors.purple[900],
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Center(
           child: Text(
             'let\'sGG',
-            style: TextStyle(
+            style: GoogleFonts.lilitaOne(
               color: Colors.white,
               fontSize: 25.0,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Lilita One',
             ),
           ),
         ),

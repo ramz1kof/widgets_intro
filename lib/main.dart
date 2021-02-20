@@ -6,6 +6,7 @@ void main() {
     MaterialApp(
       title: 'Widgets Intro',
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
