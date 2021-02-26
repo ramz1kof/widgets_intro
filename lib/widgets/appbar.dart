@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  String title;
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
   final Map<IconData, String> actionIcons;
+  final Function onFirstIconTap;
+  final Function navigateOnTap;
 
-  HomeAppBar({this.title, this.actionIcons});
+  MyAppBar(
+      {this.title, this.actionIcons, this.onFirstIconTap, this.navigateOnTap});
 
   Widget build(BuildContext context) {
     return AppBar(
@@ -21,14 +24,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(
             actionIcons.keys.toList()[0],
           ),
-          onPressed: () {},
+          onPressed: onFirstIconTap,
           tooltip: actionIcons.values.toList()[0],
         ),
         IconButton(
           icon: Icon(
             actionIcons.keys.toList()[1],
           ),
-          onPressed: () {},
+          onPressed: navigateOnTap,
           tooltip: actionIcons.values.toList()[1],
         ),
       ],

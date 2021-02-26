@@ -27,16 +27,20 @@ class _HomeBodyState extends State<HomeBody> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Hello it`s let\'sGG. And your points are: $_points',
-            style: TextStyle(
-              color: Colors.amber[400],
-              fontSize: 30.0,
-              fontWeight: FontWeight.w600,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.blueAccent,
-              decorationThickness: 3.0,
-              decorationStyle: TextDecorationStyle.wavy,
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              'Hello it`s let\'sGG. And your points are: $_points',
+              style: TextStyle(
+                color: Colors.amber[400],
+                fontSize: 30.0,
+                fontWeight: FontWeight.w600,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.blueAccent,
+                decorationThickness: 3.0,
+                decorationStyle: TextDecorationStyle.wavy,
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
           Container(
