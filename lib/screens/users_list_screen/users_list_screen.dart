@@ -12,7 +12,7 @@ class UserListScreen extends StatelessWidget {
           Icons.add_circle: 'Add user button',
           Icons.home_outlined: 'Home button',
         },
-        navigateOnTap: () => Navigator.pushNamed(context, '/user_details'),
+        navigateOnTap: () => Navigator.pushNamed(context, '/'),
       ),
       body: UsersGrid(),
     );

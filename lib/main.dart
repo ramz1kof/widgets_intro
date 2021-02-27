@@ -12,7 +12,6 @@ void main() {
       routes: {
         '/': (context) => HomeScreen(),
         '/users': (context) => UserListScreen(),
-        '/user_details': (context) => UserDetailsScreen(),
       },
     ),
   );

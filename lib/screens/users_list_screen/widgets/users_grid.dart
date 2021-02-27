@@ -15,14 +15,14 @@ var users = <User>[
     'Tupis',
     18,
     avatar: 'assets/images/rt.png',
-    description: 'Kotlin developer, IoT student',
+    description: 'Kotlin developer',
   ),
   User(
     'Zenoviy',
     'Haiduk',
     18,
     avatar: 'assets/images/zh.png',
-    description: 'RectJS developer',
+    description: 'ReactJS developer',
   ),
 ];
 

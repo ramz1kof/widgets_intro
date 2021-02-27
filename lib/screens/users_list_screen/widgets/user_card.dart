@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_intro/models/user.dart';
+import 'package:widgets_intro/screens/user_details_screen/user_details_screen.dart';
 
 class UserCard extends StatelessWidget {
   final User user;
@@ -8,21 +9,50 @@ class UserCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(user.avatar),
-          fit: BoxFit.cover,
+    return GestureDetector(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.0),
+          image: DecorationImage(
+            image: AssetImage(user.avatar),
+            fit: BoxFit.cover,
+          ),
+        ),
+        alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Text(
+              '${user.name} ${user.surname}',
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              '${user.age}',
+              style: TextStyle(
+                fontSize: 18.0,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              user.description,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.white,
+              ),
+            )
+          ],
         ),
       ),
-      alignment: Alignment.centerLeft,
-      child: Column(
-        children: <Widget>[
-          Text(
-            '${user.name} ${user.surname}',
-            style: TextStyle(),
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => UserDetailsScreen(
+            user: user,
           ),
-        ],
+        ),
       ),
     );
   }
