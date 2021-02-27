@@ -6,7 +6,7 @@ class PointsButton extends StatelessWidget {
   final Function onTap;
 
   PointsButton({this.onDoubleTap, this.onTap});
-
+  @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onDoubleTap: onDoubleTap,
